@@ -5,18 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
 </head>
 <body>
-<section class="section">
+<section class="section" id="section-div">
+    <div id="overlay"></div>
     <div class="container">
         <h1 class="title">
-            Hello World
+            Registration
         </h1>
-        <p class="subtitle">
-            My first website with <strong>Bulma</strong>!
-        </p>
+        <div class="error-msg-general-class fade" id="error-msg-general"></div>
+        <div class="field">
+            <div class="error-msg fade" id="error-msg-phone"></div>
+            <label class="label">Phone</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="phone">
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="error-msg fade" id="error-msg-first-name"></div>
+            <label class="label">First Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="first-name">
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="error-msg fade" id="error-msg-last-name"></div>
+            <label class="label">Last Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="last-name">
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="error-msg fade" id="error-msg-birthday"></div>
+            <label class="label">Birthday</label>
+            <div class="control">
+                <input class="input" type="date" placeholder="Text input" id="birthday">
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <label class="radio">
+                    <input type="radio" name="gender" value=true>
+                    Male
+                </label>
+                <label class="radio">
+                    <input type="radio" name="gender" value=false>
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Text input" id="email">
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link" id="submit-btn">Register</button>
+            </div>
+
+        </div>
     </div>
 </section>
+<script type="application/javascript" src="js/index.js"></script>
 </body>
 </html>
